@@ -22,18 +22,10 @@ layout= """
 <hr/>
 """
 def saludo(request):
-    mensaje = """
-    <h1>Bienvenidos al curso</h1>
-    <h2>Mg. Flor Elizabeth Cerdan León</h2>
-    <h3>Todo lo puedo en Cristo que me fortalece</h3>
-    """
-    return HttpResponse(layout + mensaje)
+    return render(request, 'saludo.html')
 
 def index(request):
-    mensaje="""
-    <h1>Inicio</h1>
-    """
-    return HttpResponse(layout + mensaje)
+    return render(request, 'index.html')
 
 def rango(request):
     a=10
